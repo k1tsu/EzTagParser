@@ -3,7 +3,13 @@ RSpec.describe Eztagparser do
     expect(Eztagparser::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  it "gets a single tag" do
+    expect(eztag("<x> Hello! </x>")).to eq({"x"=>"Hello!"})
   end
+
+  it "gets a 1+ tag" do
+    expect(eztag("<x> Hello! </x>")).to eq({"x"=>{"y"=>"Hello"}})
+    end
+
+
 end
