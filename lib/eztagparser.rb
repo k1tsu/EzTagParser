@@ -2,7 +2,7 @@ require "eztagparser/version"
 
 module Eztagparser
   class Error < StandardError; end
-  def eztag(string)
+  def self.eztag(string)
     if string.is_a? String
     else
       raise "eztag error: passing argument is not string type"
@@ -29,6 +29,7 @@ module Eztagparser
         end
       end
     end
+     return tags[0] if tags.length == 1
      return tags
   end
 end

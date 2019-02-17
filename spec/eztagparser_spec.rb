@@ -4,11 +4,11 @@ RSpec.describe Eztagparser do
   end
 
   it "gets a single tag" do
-    expect(eztag("<x> Hello! </x>")).to eq({"x"=>"Hello!"})
+    expect(Eztagparser.eztag("<x> Hello! </x>")).to eq({"x"=>"Hello!"})
   end
 
   it "gets a 1+ tag" do
-    expect(eztag("<x> Hello! </x>")).to eq({"x"=>{"y"=>"Hello"}})
+    expect(Eztagparser.eztag("<x><y> Hello! </y></x>")).to eq({"x"=>{"y"=>"Hello!"}})
     end
 
 
