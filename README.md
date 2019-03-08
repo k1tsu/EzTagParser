@@ -21,10 +21,10 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-eztag("<first> Hello </first> <second> World </second>") #=> [{"first"=>"Hello"}, {"second"=>"World"}]
-eztag("<really><long><tags>Hello!</tags></long></really>") #=> [{"really"=>{"long"=>{"tags"=>"Hello!"}}}]
-eztag("<a><mix>of</mix></a> <different>tag lengths</different>") #=> [{"a"=>{"mix"=>"of"}}, {"different"=>"tag lengths"}]
-eztag("<br><x>foo</x></img>") #=> [{"x"=>"foo"}]
+Eztagparser.eztag("<first> Hello </first> <second> World </second>") #=> [{"first"=>"Hello"}, {"second"=>"World"}]
+Eztagparser.eztag("<really><long><tags>Hello!</tags></long></really>") #=> [{"really"=>{"long"=>{"tags"=>"Hello!"}}}]
+Eztagparser.eztag("<a><mix>of</mix></a> <different>tag lengths</different>") #=> [{"a"=>{"mix"=>"of"}}, {"different"=>"tag lengths"}]
+Eztagparser.eztag("<br><x>foo</x></img>") #=> [{"x"=>"foo"}]
 ```
 
 ## Development
